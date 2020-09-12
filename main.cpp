@@ -3,17 +3,16 @@ using namespace std;
 
 int main() {
   int a[50], n, i;
-  cout << "Numarul de elemente din sirul a (maximum 20) ";
-  cin >> n;
-  for (i = 0; i < n; i++) {
-    cout << "a[" << i << "] = ";
-    cin >> a[i];
+  cout << "Numarul elementelot din sir: "; cin >> n;
+  for(i=0; i<n; i++){
+    cout << "a[" << i << "]= "; cin >> a[i];
   }
-long int sum;
-  sum = 0;
-  for (int i = 0; i < n; i++ )
-  {
-      sum = sum + a[i];
-  }
-  cout << "Suma elementelor sirului a este : " << sum << endl;
+  int max;
+   max = a[0];
+   for (i = 0; i < n; i++)
+   {
+      if(max < a[i])
+        max = a[i];
+   }
+   cout << "Valoarea maxima este : " << max << endl;
 }
